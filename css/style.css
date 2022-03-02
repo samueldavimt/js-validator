@@ -15,10 +15,12 @@
 }
 
 form{
-
+    position: relative;
+    top: -40px;
     width: 400px;
     padding: 20px;
     text-align:center;
+   
 }
 form h1{
     font-size: 25px;
@@ -28,6 +30,10 @@ label{
     display: flex;
     flex-direction: column;
     margin: 10px 0px;
+}
+label span{
+    text-align: left;
+    padding: 5px 0px;
 }
 
 label input{
@@ -57,4 +63,15 @@ input[type='submit']{
 input[type='submit']:hover{
     background-color: #0c5fdb;
     transition: 0.2s;
+}
+
+@media (max-width:770px){
+    form{
+       top: 0px;
+    }
+}
+@media (max-width:500px){
+    form{
+        width: 90%;
+    }
 }
