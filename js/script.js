@@ -60,6 +60,17 @@ const formValidator = {
                         formValidator.inputReject(input)
                         return false
                     }
+                
+                case 'especial_caractere':
+                    let patternSymbols = /[-!$%^&*()+'|"~=`{}\[\]:\/;<>?,#]/;
+                    let textValue = input.value;
+
+                    if(patternSymbols.test(textValue) == true){
+                        console.log(input.getAttribute('name'),'carateres invalidos') 
+                        formValidator.inputReject(input)
+                        return false
+                    }
+
                     
                 
             }
