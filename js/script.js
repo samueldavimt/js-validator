@@ -52,6 +52,15 @@ const formValidator = {
                         return false
                     }
                     break
+                case 'email':
+                    let pattern = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/
+                    let email = input.value;
+                    if(pattern.test(email) == false){
+                        console.log(input.getAttribute('name'),'email invalido') 
+                        formValidator.inputReject(input)
+                        return false
+                    }
+                    
                 
             }
         }
